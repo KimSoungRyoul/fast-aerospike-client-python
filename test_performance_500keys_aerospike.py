@@ -112,7 +112,7 @@ def run_performance_test(iterations=100):
         # Verify results
         print(f"   [{i+1:2d}/{iterations}] Latency: {latency:7.2f}ms, "
               f"Memory: +{memory_delta:6.2f}MB, "
-              f"Records: {len([r for r in batch_records if r[1] is not None]):,}")
+              f"Records: {len([r for r in batch_records.batch_records if r.result is not None]):,}")
 
     
     # Analyze results
